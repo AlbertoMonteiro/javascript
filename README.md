@@ -1,6 +1,6 @@
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/airbnb/javascript?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-# Airbnb JavaScript Style Guide() {
+# Nash ~~Airbnb~~ JavaScript Style Guide() {
 
 *A mostly reasonable approach to JavaScript*
 
@@ -31,12 +31,6 @@
   1. [ECMAScript 5 Compatibility](#ecmascript-5-compatibility)
   1. [Testing](#testing)
   1. [Performance](#performance)
-  1. [Resources](#resources)
-  1. [In the Wild](#in-the-wild)
-  1. [Translation](#translation)
-  1. [The JavaScript Style Guide Guide](#the-javascript-style-guide-guide)
-  1. [Chat With Us About Javascript](#chat-with-us-about-javascript)
-  1. [Contributors](#contributors)
   1. [License](#license)
 
 ## Types
@@ -735,12 +729,12 @@
 
 ## Whitespace
 
-  - Use soft tabs set to 2 spaces
+  - Use soft tabs set to 4 spaces
 
     ```javascript
     // bad
     function() {
-    ∙∙∙∙var name;
+    ∙∙var name;
     }
 
     // bad
@@ -750,7 +744,7 @@
 
     // good
     function() {
-    ∙∙var name;
+    ∙∙∙∙var name;
     }
     ```
 
@@ -1144,20 +1138,19 @@
 ## Accessors
 
   - Accessor functions for properties are not required
-  - If you do make accessor functions use getVal() and setVal('hello')
 
     ```javascript
     // bad
-    dragon.age();
-
-    // good
     dragon.getAge();
 
+    // good
+    dragon.age();
+
     // bad
-    dragon.age(25);
+    dragon.setAge(25);
 
     // good
-    dragon.setAge(25);
+    dragon.age(25);
     ```
 
   - If the property is a boolean, use isVal() or hasVal()
